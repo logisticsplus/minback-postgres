@@ -20,4 +20,6 @@ ENV DATE_FORMAT="+%Y-%m-%d"
 
 ADD entrypoint.sh /app/entrypoint.sh
 
-ENTRYPOINT [ "/app/entrypoint.sh" ]
+WORKDIR /app
+
+ENTRYPOINT [ "entrypoint.sh" ]
