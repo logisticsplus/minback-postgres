@@ -5,7 +5,7 @@ RUN wget -O /tmp/mc https://dl.minio.io/client/mc/release/linux-amd64/mc
 RUN chmod +x /tmp/mc
 
 # Then build our backup image
-FROM postgres:12-alpine
+FROM postgres:14-alpine
 LABEL maintainer="Flakron Bytyqi <flakron@gmail.com>"
 
 COPY --from=0 /tmp/mc /usr/bin/mc
